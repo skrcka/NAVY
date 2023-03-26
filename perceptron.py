@@ -2,8 +2,8 @@ import random
 import matplotlib.pyplot as plt
 import numpy as np
 
-LEARNING_RATE = 0.01
-STEPS = 100000
+LEARNING_RATE = 0.1
+STEPS = 10000
 MIN_X1 = -10
 MAX_X1 = 10
 MIN_X2 = -35
@@ -16,7 +16,7 @@ def split_fn(x):
 
 def train_generate_point():
     data = []
-    for i in range(100):
+    for i in range(1000):
         x1 = random.uniform(MIN_X1, MAX_X1)
         x2 = random.uniform(MIN_X2, MAX_X2)
         # y = 4x - 5
