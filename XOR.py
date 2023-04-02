@@ -43,7 +43,7 @@ def main():
             output_activation = np.dot(hidden_output, wo)
             predicted_output = sigmoid(output_activation)
 
-            error = (y[index] - predicted_output**2) / 2
+            error = y[index] - predicted_output
             delta = error * sigmoid_(predicted_output)
 
             delta_hidden1 = sigmoid_(hidden_output[1]) * delta * wo[1]
